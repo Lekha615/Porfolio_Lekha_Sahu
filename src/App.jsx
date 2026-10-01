@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
-import Skills from './components/Skills';
+// import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Research from './components/Research';
 import Experience from './components/Experience';
@@ -26,11 +26,11 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0b0f19] text-gray-100 selection:bg-cyan-500 selection:text-slate-900">
+    <div className="bg-[#FBFBF9] text-stone-800 min-h-screen">
       <Navbar scrollTo={scrollTo} />
       <Hero scrollTo={scrollTo} />
       <About />
-      <Skills />
+      {/* <Skills /> */}
       <Projects />
       <Research />
       <Experience />

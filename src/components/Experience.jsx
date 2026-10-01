@@ -6,16 +6,16 @@ export default function Experience() {
     {
       title: "Coordinator — Robotics Club",
       organization: "Student Activity Club (SAC)",
-      period: "Apr 2024 – 2025",
+      period: "Apr 2025 – Present",
       icon: Briefcase,
-      description: "Managing lab infrastructure setups, leading hands-on microcontroller flashing bootcamps, and orchestrating design challenges focused on autonomous algorithmic obstacle tracking."
+      description: "Managing lab infrastructure setups, leading hands-on microcontroller bootcamps, and orchestrating design challenges focused on autonomous obstacle tracking."
     },
     {
       title: "Lance Corporal — NCC Volunteer",
       organization: "National Cadet Corps",
       period: "Oct 2023 – Feb 2026",
       icon: Shield,
-      description: "Served as Lance Corporal. Attended key training camps including CATC-15 (Lakholi), CATC-132 (Rajnandgaon), and CATC-146 Pre-TSC Camp (Lakholi)."
+      description: "Served as Lance Corporal. Participated in intensive field camps including CATC-15 (Lakholi), CATC-132 (Rajnandgaon), and CATC-146 Pre-TSC Camp (Lakholi)."
     },
     {
       title: "Graphic Designer — SAC Newsletter",
@@ -28,60 +28,54 @@ export default function Experience() {
 
   const achievements = [
     {
-      title: "Theme Winner — Hack-Arena National Level Hackathon",
+      title: "Theme Winner — Hack-Arena National Hackathon",
       organization: "GNIT, Hyderabad",
-      date: "Nov 21 – 23, 2024",
-      mode: "Offline",
-      description: "Secured top position in the national hackathon track competing against teams nationwide in system architecture and execution."
+      date: "Nov 2024",
+      description: "Secured top position in the national hackathon track competing against teams nationwide in system architecture."
     },
     {
       title: "2nd Position — Agri-Tech Hackathon",
       organization: "K.J. Somaiya School of Engineering",
-      mode: "Offline",
-      description: "Awarded runner-up for engineering and prototyping innovative automation technology for agricultural challenges."
+      date: "March 2025",
+      description: "Recognized for prototyping functional automation technology for agricultural challenges."
     },
     {
       title: "2nd Position — Speech Competition",
       organization: "Toastmasters – SSIPMT Raipur",
-      date: "Oct 30, 2023",
-      mode: "Offline",
-      description: "Recognized for public speaking excellence and speech delivery at the Toastmasters campus platform."
+      date: "Oct 2023",
+      description: "Awarded for public address and communication clarity on the campus Toastmasters circuit."
     }
   ];
 
   return (
-    <section id="experience" className="py-24 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="mb-16 text-center">
-        <span className="font-mono text-cyan-400 text-xs tracking-widest uppercase">05 // Leadership & Recognition</span>
-        <h2 className="text-3xl font-bold text-white mt-2">Roles & Milestones</h2>
+    <section id="experience" className="py-24 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 bg-[#FBFBF9]">
+      <div className="mb-14 text-center">
+        <span className="font-mono text-[#587B6D] text-xs tracking-widest uppercase">Trajectory</span>
+        <h2 className="text-3xl font-serif font-normal text-stone-800 mt-2">Roles & Milestones</h2>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        {/* LEFT COLUMN: Leadership & Positions */}
+        {/* Leadership */}
         <div>
-          <h3 className="text-lg font-mono font-semibold text-cyan-400 mb-8 flex items-center gap-2 border-b border-slate-800 pb-3">
-            <Briefcase className="w-5 h-5" /> Leadership & Responsibilities
+          <h3 className="text-sm font-mono font-semibold text-[#587B6D] uppercase tracking-wider mb-8 flex items-center gap-2 border-b border-[#E5E3DC] pb-3">
+            <Briefcase className="w-4 h-4 text-[#C86D51]" /> Leadership & Service
           </h3>
-          <div className="relative border-l-2 border-slate-800 pl-6 space-y-10 ml-3">
+          <div className="relative border-l-2 border-[#E0DCD2] pl-6 space-y-10 ml-3">
             {leadershipRoles.map((role, idx) => {
-              const IconComponent = role.icon;
+              const Icon = role.icon;
               return (
                 <div key={idx} className="relative group">
-                  {/* Timeline Dot */}
-                  <div className="absolute -left-[31px] top-1 bg-[#0b0f19] p-1 border-2 border-cyan-500 rounded-full text-cyan-400 group-hover:scale-110 transition-transform">
-                    <IconComponent className="w-3 h-3" />
+                  <div className="absolute -left-[31px] top-1 bg-[#FBFBF9] p-1.5 border-2 border-[#587B6D] rounded-full text-[#587B6D]">
+                    <Icon className="w-3 h-3" />
                   </div>
-                  
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-1">
-                    <h4 className="text-base font-bold text-white group-hover:text-cyan-400 transition-colors">
-                      {role.title}
-                    </h4>
-                  </div>
-                  <div className="flex justify-between items-center text-xs font-mono text-cyan-500/80 mb-2">
+                  <h4 className="text-base font-medium text-stone-900 font-sans">
+                    {role.title}
+                  </h4>
+                  <div className="flex justify-between items-center text-xs font-mono text-[#587B6D] mb-2 mt-0.5">
                     <span>{role.organization}</span>
-                    <span className="text-slate-500">{role.period}</span>
+                    <span className="text-stone-400">{role.period}</span>
                   </div>
-                  <p className="text-sm text-gray-400 leading-relaxed">
+                  <p className="text-sm text-stone-600 leading-relaxed font-sans">
                     {role.description}
                   </p>
                 </div>
@@ -90,34 +84,27 @@ export default function Experience() {
           </div>
         </div>
 
-        {/* RIGHT COLUMN: Achievements & Awards */}
+        {/* Honors */}
         <div>
-          <h3 className="text-lg font-mono font-semibold text-cyan-400 mb-8 flex items-center gap-2 border-b border-slate-800 pb-3">
-            <Award className="w-5 h-5" /> Achievements & Honors
+          <h3 className="text-sm font-mono font-semibold text-[#587B6D] uppercase tracking-wider mb-8 flex items-center gap-2 border-b border-[#E5E3DC] pb-3">
+            <Award className="w-4 h-4 text-[#C86D51]" /> Recognitions & Awards
           </h3>
-          <div className="relative border-l-2 border-slate-800 pl-6 space-y-10 ml-3">
+          <div className="relative border-l-2 border-[#E0DCD2] pl-6 space-y-10 ml-3">
             {achievements.map((item, idx) => (
               <div key={idx} className="relative group">
-                {/* Timeline Dot */}
-                <div className="absolute -left-[31px] top-1 bg-[#0b0f19] p-1 border-2 border-slate-700 rounded-full text-slate-400 group-hover:border-cyan-400 group-hover:text-cyan-400 transition-all">
+                <div className="absolute -left-[31px] top-1 bg-[#FBFBF9] p-1.5 border-2 border-[#C86D51] rounded-full text-[#C86D51]">
                   <Award className="w-3 h-3" />
                 </div>
-
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-1">
-                  <h4 className="text-base font-bold text-white group-hover:text-cyan-400 transition-colors">
-                    {item.title}
-                  </h4>
-                </div>
-                <div className="flex justify-between items-center text-xs font-mono text-cyan-500/80 mb-2">
+                <h4 className="text-base font-medium text-stone-900 font-sans">
+                  {item.title}
+                </h4>
+                <div className="flex justify-between items-center text-xs font-mono text-[#C86D51] mb-2 mt-0.5">
                   <span>{item.organization}</span>
-                  <span className="text-slate-500">{item.date}</span>
+                  <span className="text-stone-400">{item.date}</span>
                 </div>
-                <p className="text-sm text-gray-400 leading-relaxed mb-2">
+                <p className="text-sm text-stone-600 leading-relaxed font-sans">
                   {item.description}
                 </p>
-                <span className="inline-block text-[10px] font-mono uppercase bg-slate-800/80 text-slate-400 px-2 py-0.5 rounded border border-slate-700/50">
-                  {item.mode}
-                </span>
               </div>
             ))}
           </div>
